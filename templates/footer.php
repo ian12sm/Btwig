@@ -2,7 +2,7 @@
   <div class="container">
     <?php dynamic_sidebar('sidebar-footer'); ?>
     <div id="social">
-  <?php if (of_get_option('show_links')){ ;?>
+  <?php if (of_get_option('show_links')){ ?>
   	<ul>
   		<?php if (of_get_option('facebook_url')){ ;?><li><a href="<?php echo of_get_option('facebook_url', 'no entry'); ?>" target="_blank" class="facebook">Facebook</a></li><?php } ?>
   		<?php if (of_get_option('twitter_url')){ ;?><li><a href="<?php echo of_get_option('twitter_url', 'no entry'); ?>" target="_blank" class="twitter">Twitter</a></li><?php } ?>  			<?php if (of_get_option('youtube_url')){ ;?><li><a href="<?php echo of_get_option('youtube_url', 'no entry'); ?>" target="_blank" class="youtube">Youtube</a></li><?php } ?>

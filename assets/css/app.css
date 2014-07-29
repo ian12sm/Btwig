@@ -190,13 +190,15 @@ padding: 15px 0px 15px 15px;
 width:100%;
 }
 
-.featured-books .wpcf-field-book-cover,
-.coming-soon .wpcf-field-book-cover {
+.featured-books .wpcf-field-book-cover {
 border: 1px solid #b3b3b3;
 border-radius: 4px;
 padding: 5px;
+max-height: 245px;
+overflow: hidden;
 width: 90%;
-height: auto;
+height: 0px;
+padding-bottom: 150%;
 display:block;
 }
 
@@ -360,17 +362,17 @@ text-align: center;
 
 /* ====== Author Single / Book Single =========================== */
 
-body.single-bt-author time,
+body.single-author time,
 body.single-book time,
-body.single-bt-author .byline,
+body.single-author .byline,
 body.single-book .byline,
 body.single-book .main header,
-body.single-bt-author .main header {display:none;}
+body.single-author .main header {display:none;}
 
 
 
 body.single-book .book-image,
-body.single-bt-author .book-image {
+body.single-author .book-image {
 border: 0px solid #b3b3b3;
 border-radius: 0px;
 padding: 0px;
@@ -381,15 +383,16 @@ height: auto;
 }
 
 body.single-book .wpcf-field-book-cover,
-body.single-bt-author .wpcf-field-book-cover {
+body.single-author .wpcf-field-book-cover {
 border: 1px solid #b3b3b3;
 border-radius: 4px;
 padding: 5px;
 display:block;
 }
 
-body.single-bt-author .wpcf-field-book-cover {
-height: auto;
+body.single-author .wpcf-field-book-cover {
+height: 0px;
+padding-bottom: 158%;
 }
 
 .book-isbn {
@@ -424,13 +427,13 @@ line-height: 20px;
 margin-bottom: 25px;
 }
 
-body.single-bt-author h2 {
+body.single-author h2 {
 height: 80px;
 display: block;
 overflow: hidden;
 }
 
-body.single-bt-author h3 {
+body.single-author h3 {
 font-size: 16px;
 font-weight: 300;
 text-align: left;
@@ -440,17 +443,17 @@ height: 39px;
 overflow: hidden;
 }
 
-body.single-bt-author .related .row-fluid {
+body.single-author .related .row-fluid {
 text-align:center;
 }
 
-body.single-bt-author .related .span3 {
+body.single-author .related .span3 {
 float: none!important;
 margin: 0px auto!important;
 display:none!important;
 }
 
-body.single-book h1, body.single-bt-author h1 {
+body.single-book h1, body.single-author h1 {
 padding-bottom: 30px;
 margin: 70px 0 50px;
 border-bottom: 1px solid #eee;
@@ -572,11 +575,6 @@ and (min-width : 1824px) {
  @media only screen 
 and (min-width : 1281px) {
 
-.book-container {
-height: 0px;
-padding-bottom: 150%;
-}
-
 }
 
 
@@ -601,11 +599,6 @@ padding: 5% 6% 6% 6%;
 background-size: 100%;
 }
 
-.book-container {
-height: 0px;
-padding-bottom: 150%;
-}
-
 }
 
 
@@ -623,10 +616,6 @@ width: 48.61878453038674%;
 display:none;
 }
 
-.book-container {
-height: 0px;
-padding-bottom: 150%;
-}	
 	
 }
 
@@ -698,8 +687,6 @@ display: block;
 max-height: 35px;
 overflow: hidden;
 }
-
-
 
 
 }
@@ -865,6 +852,8 @@ text-align: center;
 margin-bottom: 25px;
 }
 
+.addthis_toolbox {display:none;}
+
 form.searchform .screen-reader-text {
 float: none;
 font-size: 18px;
@@ -876,21 +865,9 @@ text-align: center;
 
 form.searchform .span3 {text-align:center;}
 
-body.single-bt-author .wpcf-field-book-cover {
+body.single-author .wpcf-field-book-cover {
 height: auto;
 padding-bottom: 0px;
-}
-
-figure img {
-width:100%;
-}
-
-figure wp-caption {
-width:100%
-}
-
-.thumbnail {
-width: 100%!important;
 }
 
 
